@@ -2,6 +2,8 @@
 
 AI-native Access Governance & ITSM platform. Uses autonomous AI agents with RAG to automate access management, enforce least-privilege policies, and provide intelligent ticketing.
 
+<img width="1408" height="768" alt="Agentic-Access-Management" src="https://github.com/user-attachments/assets/784526c6-fa15-4fb3-9049-c917227d1dab" />
+
 ## Stack
 
 | Layer | Technology |
