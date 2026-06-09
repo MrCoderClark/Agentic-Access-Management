@@ -4,7 +4,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
-from app.api.routes import health, users
+from app.api.routes import health, users, systems, policies, tickets, grants, audit
+from app.core.exceptions import AppError, app_error_handler, unhandled_error_handler
 
 
 @asynccontextmanager
@@ -21,6 +22,10 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Error handlers
+app.add_exception_handler(AppError, app_error_handler)
+app.add_exception_handler(Exception, unhandled_error_handler)
+
 # CORS
 app.add_middleware(
     CORSMiddleware,
@@ -33,3 +38,8 @@ app.add_middleware(
 # Routes
 app.include_router(health.router, tags=["health"])
 app.include_router(users.router)
+app.include_router(systems.router)
+app.include_router(policies.router)
+app.include_router(tickets.router)
+app.include_router(grants.router)
+app.include_router(audit.router)
