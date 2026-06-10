@@ -12,6 +12,7 @@ import {
   Users,
   Eye,
   Bot,
+  MessageSquare,
   ScrollText,
   BarChart3,
   Settings,
@@ -38,6 +39,7 @@ const navGroups = [
     items: [
       { label: "Reviews", href: "/dashboard/reviews", icon: Eye },
       { label: "Agents", href: "/dashboard/agents", icon: Bot },
+      { label: "Chat", href: "/dashboard/chat", icon: MessageSquare },
       { label: "Audit", href: "/dashboard/audit", icon: ScrollText },
       { label: "Analytics", href: "/dashboard/analytics", icon: BarChart3 },
     ],
