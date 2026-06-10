@@ -24,6 +24,7 @@ ai = [
     { name = "langchain-openai" },
     { name = "langgraph" },
     { name = "sentence-transformers" },
+    { name = "tiktoken" },
 ]
 dev = [
     { name = "pytest" },
@@ -48,6 +49,7 @@ requires-dist = [
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.8.0" },
     { name = "sentence-transformers", marker = "extra == 'ai'", specifier = ">=3.3.0" },
     { name = "supabase", specifier = ">=2.11.0" },
+    { name = "tiktoken", marker = "extra == 'ai'", specifier = ">=0.8.0" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.32.0" },
 ]
 provides-extras = ["ai", "dev"]
