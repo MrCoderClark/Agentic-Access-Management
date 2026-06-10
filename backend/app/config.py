@@ -24,6 +24,11 @@ class Settings(BaseSettings):
     embedding_model: str = "text-embedding-3-small"
     embedding_dimension: int = 1536
 
+    # Slack
+    slack_bot_token: str = ""
+    slack_signing_secret: str = ""
+    slack_app_token: str = ""
+
     # Agent
     agent_model: str = "gpt-4o"
     agent_confidence_threshold: float = 0.6
