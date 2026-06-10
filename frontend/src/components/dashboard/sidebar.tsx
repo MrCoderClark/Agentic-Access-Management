@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   Server,
   BookOpen,
+  Users,
   Eye,
   Bot,
   ScrollText,
@@ -30,6 +31,7 @@ const navGroups = [
       { label: "Policies", href: "/dashboard/policies", icon: ShieldCheck },
       { label: "Systems", href: "/dashboard/systems", icon: Server },
       { label: "Knowledge", href: "/dashboard/knowledge", icon: BookOpen },
+      { label: "Users", href: "/dashboard/users", icon: Users },
     ],
   },
   {
