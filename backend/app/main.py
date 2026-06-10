@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
-from app.api.routes import health, users, systems, policies, tickets, grants, audit, documents, access_requests, agents, chat
+from app.api.routes import health, users, systems, policies, tickets, grants, audit, documents, access_requests, agents, chat, reviews, analytics
 from app.core.exceptions import AppError, app_error_handler, unhandled_error_handler
 
 
@@ -47,3 +47,5 @@ app.include_router(documents.router)
 app.include_router(access_requests.router)
 app.include_router(agents.router)
 app.include_router(chat.router)
+app.include_router(reviews.router)
+app.include_router(analytics.router)
