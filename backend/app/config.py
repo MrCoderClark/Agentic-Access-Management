@@ -25,6 +25,7 @@ class Settings(BaseSettings):
     embedding_dimension: int = 1536
 
     # Agent
+    agent_model: str = "gpt-4o"
     agent_confidence_threshold: float = 0.6
     agent_max_retries: int = 3
     agent_timeout_seconds: int = 30
