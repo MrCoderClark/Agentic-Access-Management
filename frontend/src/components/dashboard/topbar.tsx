@@ -23,6 +23,7 @@ const routeLabels: Record<string, string> = {
   "/dashboard/policies": "Policies",
   "/dashboard/systems": "Systems",
   "/dashboard/knowledge": "Knowledge Base",
+  "/dashboard/users": "Users",
   "/dashboard/reviews": "Access Reviews",
   "/dashboard/agents": "Agent Observatory",
   "/dashboard/audit": "Audit Log",
