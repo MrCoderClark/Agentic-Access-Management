@@ -85,3 +85,21 @@ async def run_sentinel_scan():
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Sentinel scan failed: {str(e)}")
+
+
+@router.post("/oversight/audit")
+async def run_oversight_audit(limit: int = 20):
+    """Run the Oversight Agent to review recent agent decisions.
+
+    Checks for:
+    - High-risk approvals without escalation
+    - Elevated privilege grants
+    - Pattern anomalies
+    """
+    from app.agents.oversight_agent import oversight_agent
+
+    try:
+        result = await oversight_agent.audit_recent_decisions(limit=limit)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Oversight audit failed: {str(e)}")
